@@ -7,10 +7,15 @@
     <p><a href="/gossips/new/">CREER UN NOUVEAU GOSSIP </a></p>
 
     <h1> LISTE DES POTINS EXISTANTS :</h1>
-    <p><% gossips.each do |gossip| %>
+    <p><% gossips.each_with_index do |gossip, index| %>
         <p>
+          <%= "Potin numéro #{index}" %> <br/>
           <%= gossip.author %><br/>
-          <%= gossip.content %>
+          <%= gossip.content %><br/>
+
+
+
+
         </p><% end %></p>
   </body>
 </html>

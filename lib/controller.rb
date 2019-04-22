@@ -18,6 +18,13 @@ require 'gossip'
   		redirect '/'
 	end
 
+		get 'gossips/:id' do 
+				
+				 erb :show
+		
+#gossips.each_with_index { |val,index| puts "index: #{index} for #{val.name}"}
+		end
 
 end
+
 
