@@ -18,9 +18,15 @@ require 'gossip'
   		redirect '/'
 	end
 
-		get '/gossips/:id' do 
-			"Voici le numéro du potin que tu veux : #{params[:id]}"         # VERSION HTML
+		get '/gossips/:id/' do 
+			erb :show, locals: {gossips: Gossip.find(:id)}
+			#{}"Voici le numéro du potin que tu veux : #{params[:id]}"   
+			Gossip.find(params[:id])
+			erb :show
+			#$azer = params[:id]
+			   # VERSION HTML
  			#puts "Voici le numéro du potin que tu veux : #{params[:id]}"   #VERSION TERMINAL
 
 	end
 end
+
