@@ -6,7 +6,7 @@ class Gossip
 	  @@csv = './db/gossip.csv'
 	  @@json = './db/gossip.json'
 
-	def initialize(author, content, id)
+	def initialize(author, content, id=1)
  		 @content = content
  	 	 @author = author
  	 	 @id = id
@@ -27,6 +27,22 @@ class Gossip
   		end
   		return all_gossips
 	end
-binding.pry
+
+
+	def self.find(x) # x est le numéro du gossip
+		#puts "recherche de #{x} en cours"
+		#
+		show = []
+			Gossip.all.each do |gossip, id|
+				if  x == gossip.id then
+								#  "MATCH ! "
+					show << gossip.author
+					show << gossip.content
+
+				return show
+			end
+		end
+	end
+
 end
 
