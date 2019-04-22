@@ -18,13 +18,9 @@ require 'gossip'
   		redirect '/'
 	end
 
-		get 'gossips/:id' do 
-				
-				 erb :show
-		
-#gossips.each_with_index { |val,index| puts "index: #{index} for #{val.name}"}
-		end
+		get '/gossips/:id' do 
+			"Voici le numéro du potin que tu veux : #{params[:id]}"         # VERSION HTML
+ 			#puts "Voici le numéro du potin que tu veux : #{params[:id]}"   #VERSION TERMINAL
 
+	end
 end
-
-
