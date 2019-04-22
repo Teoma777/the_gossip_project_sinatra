@@ -1,13 +1,19 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>POTIN NUMERO X</title>
+	<title>PAGE POTIN</title>
 </head>
 <body>
 
-	<h1>BLABLA</h1>
-<p><% gossips.each do |entry| %>
-  <%= entry[1] %>,<%= entry[4] %>:<%= entry[0] %>
-<% end %></p>
+
+<h1> Voici le numéro du potin que tu veux : <%=params[:id]%></h1>
+	
+	<p>Son Auteur :</p>
+
+	<p>Le contenu du potin : </p>
+
+    <p><a href="/gossips/new/">CREER UN NOUVEAU GOSSIP </a></p>
+
 </body>
 </html>
+
+
